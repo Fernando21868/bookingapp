@@ -1,0 +1,83 @@
+// Hotels REST
+POST http://localhost:8800/api/hotels HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Hotel john",
+    "type": "hotel",
+    "city": "berlin",
+    "address": "somewhere",
+    "distance": "492",
+    "title": "best hotel",
+    "desc": "hotel desc",
+    "cheapestPrice": 100
+}
+
+###
+PUT http://localhost:8800/api/hotels/644b4b5014af5defd5fb74c6 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "New Hotel john",
+    "type": "New hotel",
+    "city": "New berlin",
+    "address": "New somewhere",
+    "distance": "New492",
+    "title": "best hotel",
+    "desc": "hotel desc",
+    "cheapestPrice": 100
+}
+
+###
+GET http://localhost:8800/api/hotels HTTP/1.1
+
+###
+GET http://localhost:8800/api/hotels/644b495d7a97520b4692039b HTTP/1.1
+
+###
+DELETE  http://localhost:8800/api/hotels/644b495d7a97520b4692039b HTTP/1.1
+
+// USERS REST
+
+###
+POST http://localhost:8800/api/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "john2",
+    "email": "john2@gmail.com",
+    "password": "john2"
+}
+
+###
+POST http://localhost:8800/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "john2",
+    "password": "john2"
+}
+
+###
+GET http://localhost:8800/api/users/ HTTP/1.1
+
+###
+GET http://localhost:8800/api/users/644db5931e1c66e9172b68c2 HTTP/1.1
+
+###
+PUT http://localhost:8800/api/users/644db5931e1c66e9172b68c2 HTTP/1.1
+content-type: application/json
+
+{
+    "username": "john",
+    "password": "john"
+}
+
+###
+GET http://localhost:8800/api/users/checkauthentication HTTP/1.1
+
+###
+GET http://localhost:8800/api/users/checkuser/644db5931e1c66e9172b68c2 HTTP/1.1
+
+###
+GET http://localhost:8800/api/users/checkadmin/644dc61e2c02ccf85d8ab115 HTTP/1.1
