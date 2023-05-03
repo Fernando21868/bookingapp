@@ -81,3 +81,20 @@ GET http://localhost:8800/api/users/checkuser/644db5931e1c66e9172b68c2 HTTP/1.1
 
 ###
 GET http://localhost:8800/api/users/checkadmin/644dc61e2c02ccf85d8ab115 HTTP/1.1
+
+// ROOMS REST
+
+###
+POST http://localhost:8800/api/rooms/644b4b5014af5defd5fb74c6 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "King Room",
+    "desc": "King size bed, 1 atrhoom, balcony",
+    "price": 100,
+    "maxPeople": 2,
+    "roomNumbers": [{"number":"101"},{"number":"102"}]
+}
+
+###
+DELETE http://localhost:8800/api/rooms/6451c25ebace5684761646e4/644b4b5014af5defd5fb74c6 HTTP/1.1
