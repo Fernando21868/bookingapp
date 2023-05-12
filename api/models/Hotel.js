@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose';
+import mongoose from "mongoose";
 const HotelSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -45,8 +45,8 @@ const HotelSchema = new mongoose.Schema({
   },
   featured: {
     type: Boolean,
-    required: false,
+    default: false,
   },
 });
 
-export default mongoose.model('Hotel', HotelSchema);
+export default mongoose.model("Hotel", HotelSchema);

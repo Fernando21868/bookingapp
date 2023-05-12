@@ -3,13 +3,13 @@ POST http://localhost:8800/api/hotels HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Hotel john",
+    "name": "Hotel john 2",
     "type": "hotel",
-    "city": "berlin",
+    "city": "madrid",
     "address": "somewhere",
-    "distance": "492",
-    "title": "best hotel",
-    "desc": "hotel desc",
+    "distance": "500",
+    "title": "Best Hotel in the City",
+    "desc": "hotel description",
     "cheapestPrice": 100
 }
 
@@ -29,7 +29,7 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:8800/api/hotels HTTP/1.1
+GET http://localhost:8800/api/hotels?featured=true&limit=2&min=1&max=200 HTTP/1.1
 
 ###
 GET http://localhost:8800/api/hotels/644b495d7a97520b4692039b HTTP/1.1
@@ -98,3 +98,9 @@ content-type: application/json
 
 ###
 DELETE http://localhost:8800/api/rooms/6451c25ebace5684761646e4/644b4b5014af5defd5fb74c6 HTTP/1.1
+
+###
+GET http://localhost:8800/api/hotels/countByCity?cities=berlin,madrid,london HTTP/1.1
+
+###
+GET http://localhost:8800/api/hotels/countByType HTTP/1.1
