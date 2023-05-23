@@ -85,15 +85,15 @@ GET http://localhost:8800/api/users/checkadmin/644dc61e2c02ccf85d8ab115 HTTP/1.1
 // ROOMS REST
 
 ###
-POST http://localhost:8800/api/rooms/644b4b5014af5defd5fb74c6 HTTP/1.1
+POST http://localhost:8800/api/rooms/645c45ecf322a34ca87ae7eb HTTP/1.1
 content-type: application/json
 
 {
-    "title": "King Room",
+    "title": "Another Room",
     "desc": "King size bed, 1 atrhoom, balcony",
     "price": 100,
     "maxPeople": 2,
-    "roomNumbers": [{"number":"101"},{"number":"102"}]
+    "roomNumbers": [{"number":"301"},{"number":"302"}]
 }
 
 ###
@@ -104,3 +104,6 @@ GET http://localhost:8800/api/hotels/countByCity?cities=berlin,madrid,london HTT
 
 ###
 GET http://localhost:8800/api/hotels/countByType HTTP/1.1
+
+###
+GET http://localhost:8800/api/hotels/room/645c45ecf322a34ca87ae7eb HTTP/1.1
